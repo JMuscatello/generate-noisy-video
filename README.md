@@ -5,17 +5,17 @@ Python script to creates videos from a base image and a number of audio (.wav) f
 ## Install requirements
 
 Install `requirements.txt`
-"""console
+```console
 foo@bar:~$ pip install requirements.txt
-"""
+```
 
 Install FFmpeg (Debian)
-"""console
+```console
 foo@bar:~$ sudo apt install ffmpeg
-"""
+```
 
 ## Run script
 
-"""console
+```console
 foo@bar:~$ python process_video.py -a /path/to/audio/files/ -i /path/to/my/image.png -o /path/to/videos/
-"""
+```
