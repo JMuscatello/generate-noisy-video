@@ -1,4 +1,6 @@
 import os
+from shlex import quote
+
 
 from pathlib import Path
 import numpy as np
@@ -47,6 +49,8 @@ def generate_video(
 
     path_to_temp_video = Path(output_dir) / Path(Path(path_to_audio).stem + '_temp').with_suffix('.mp4')
     path_to_video = Path(output_dir) / Path(Path(path_to_audio).name).with_suffix('.mp4')
+    print('LLLLLLLLLLLLASSSSSSSSSDDDDDDDDDDDDDDDDd')
+    print(path_to_temp_video)
 
     original_image = cv2.imread(path_to_image)
     height, width, channels = original_image.shape
@@ -71,7 +75,7 @@ def generate_video(
     print('Adding audio')
     os.system(f'ffmpeg -i "{str(path_to_temp_video)}" -i "{str(path_to_audio)}" -c:a aac -vcodec copy -map 0:v:0 -map 1:a:0 "{str(path_to_video)}"')
     print('Removing temp file')
-    os.system(f'rm {str(path_to_temp_video)}')
+    os.system(f'rm {quote(str(path_to_temp_video))}')
 
 
 @click.command()
