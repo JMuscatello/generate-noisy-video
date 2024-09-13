@@ -1,16 +1,15 @@
 import os
 from shlex import quote
-
-
 from pathlib import Path
-import numpy as np
 
 import click
 
 import cv2
-
 import librosa
+
+import numpy as np
 from scipy.integrate import trapezoid
+
 from tqdm import tqdm
 
 
@@ -63,7 +62,7 @@ def generate_video(
     
         mean = max_noise*(power/max_power)
         new_image = add_gaussian_noise(old_image, mean, std=5)
-        new_image = cv2.addWeighted(new_image,power/max_power, original_image,1-power/max_power, 0)
+        new_image = cv2.addWeighted(new_image, power/max_power, original_image, 1-power/max_power, 0)
         video.write(new_image)
         old_image = new_image
     
