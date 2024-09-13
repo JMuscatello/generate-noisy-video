@@ -100,5 +100,4 @@ def process_video(directory, image_path, output):
 
 
 if __name__ == '__main__':
-    print('doing')
     process_video()
