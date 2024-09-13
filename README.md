@@ -1,6 +1,6 @@
 # generate-noisy-video
 
-Python script to creates videos from a base image and a number of audio (.wav) files by adding Gaussian noise. The amount of noise is dependent on the total power of the spectrum of the audio file for a window with spacing corresponding to the frame rate of the video. 
+Python script to create videos from a base image and a number of audio (.wav) files by adding Gaussian noise. The amount of noise in any given frame is dependent on the total power of the spectrum of the audio in a window with spacing in time corresponding to the frame rate of the video. Requires FFmpeg.
 
 ## Install requirements
 
