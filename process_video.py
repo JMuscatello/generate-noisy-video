@@ -49,8 +49,6 @@ def generate_video(
 
     path_to_temp_video = Path(output_dir) / Path(Path(path_to_audio).stem + '_temp').with_suffix('.mp4')
     path_to_video = Path(output_dir) / Path(Path(path_to_audio).name).with_suffix('.mp4')
-    print('LLLLLLLLLLLLASSSSSSSSSDDDDDDDDDDDDDDDDd')
-    print(path_to_temp_video)
 
     original_image = cv2.imread(path_to_image)
     height, width, channels = original_image.shape
